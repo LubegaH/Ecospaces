@@ -1,4 +1,3 @@
-'use client';
 import Container from '../Container';
 import Logo from '@/app/components/nabar/Logo';
 import Search from '@/app/components/nabar/Search';
@@ -10,6 +9,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
+  console.log({ currentUser });
   return (
     <div className='fixed w-full bg-white z-10 shadow-sm'>
       <div className='py-4 border-b-[1px]'>
@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
           >
             <Logo />
             <Search />
-            <UserMenu currentUser={currentUser} />
+            <UserMenu />
           </div>
         </Container>
       </div>

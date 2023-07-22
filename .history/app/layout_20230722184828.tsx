@@ -16,12 +16,12 @@ export const metadata = {
   description: 'The quickest way to find lodges',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const currentUser = await getCurrentUser();
+  const currentUser = await getCurrentUser;
   return (
     <html lang='en'>
       <body className={nunito.className}>
@@ -30,7 +30,7 @@ export default async function RootLayout({
           <ToasterProvider />
           <RegisterModel />
           <LoginModel />
-          <Navbar currentUser={currentUser} />
+          <Navbar />
         </ClientOnly>
 
         {children}

@@ -6,10 +6,10 @@ import UserMenu from '@/app/components/nabar/UserMenu';
 import { User } from '@prisma/client';
 
 interface NavbarProps {
-  currentUser?: User | null;
+  currentUser?: null;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
+const Navbar = () => {
   return (
     <div className='fixed w-full bg-white z-10 shadow-sm'>
       <div className='py-4 border-b-[1px]'>
@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
           >
             <Logo />
             <Search />
-            <UserMenu currentUser={currentUser} />
+            <UserMenu />
           </div>
         </Container>
       </div>
