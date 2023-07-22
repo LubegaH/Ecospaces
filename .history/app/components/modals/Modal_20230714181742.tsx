@@ -201,7 +201,7 @@ const Modal: React.FC<ModalProps> = ({
                     disabled={disabled}
                     label={actionLabel}
                     onClick={handleSubmit}
-                    className='bg-green'
+                    className={}
                   />
                 </div>
                 {footer}

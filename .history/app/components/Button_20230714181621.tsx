@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
         ${small ? 'text-sm' : 'py-3'}
         ${small ? 'font-light' : 'font-semibold'}
         ${small ? 'border-[1px]' : 'border-2'}
-        ${className ? 'bg-green-700' : ''}`}
+        ${className ? 'bg-green-400' : ''}`}
     >
       {Icon && (
         <Icon

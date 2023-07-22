@@ -31,7 +31,7 @@ const UserMenu = () => {
                 cursor-pointer'
           onClick={() => {}}
         >
-          Airbnb your home
+          Ecoplace your home
         </div>
         <div
           onClick={toggleOpen}
