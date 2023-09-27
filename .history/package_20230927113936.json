@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "release": "standard-version"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^0.4.4-canary.81",

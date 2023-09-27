@@ -88,8 +88,8 @@ const RegisterModel = () => {
   };
 
   const toggle = useCallback(() => {
-    registerModal.onClose();
-    loginModal.onOpen();
+    registerModal.onOpen();
+    loginModal.onClose();
   }, [loginModal, registerModal]);
 
   /**
@@ -147,7 +147,7 @@ const RegisterModel = () => {
         <div className='flex flex-row items-center gap-2 justify-center'>
           <div>Already have an account?</div>
           <div
-            onClick={toggle}
+            onClick={registerModal.onClose}
             className='text-green-700 cursor-pointer hover:underline font-semibold'
           >
             Log in

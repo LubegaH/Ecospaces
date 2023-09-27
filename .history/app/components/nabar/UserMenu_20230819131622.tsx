@@ -8,7 +8,6 @@ import useRegisterModel from '@/app/hooks/useRegisterModal';
 import useLoginModel from '@/app/hooks/useLoginModal';
 import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/app/types';
-import useRentModal from '@/app/hooks/useRentModal';
 
 interface UserMenuProps {
   currentUser?: SafeUser | null;
@@ -18,7 +17,6 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const [isOpen, setIsOpen] = useState(false);
   const regiserModal = useRegisterModel();
   const loginModal = useLoginModel();
-  const rentModal = useRentModal();
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
@@ -26,12 +24,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
   const onRent = useCallback(() => {
     if (!currentUser) {
-      return loginModal.onOpen();
+      loginModal.onOpen();
     }
-
-    // Open rent Modal
-    rentModal.onOpen();
-  }, [currentUser, loginModal, rentModal]);
+  }, [second]);
 
   return (
     <div className='relative'>
@@ -48,7 +43,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 hover:bg-neutral-100
                 transition
                 cursor-pointer'
-          onClick={onRent}
+          onClick={() => {}}
         >
           Ecoplace your home
         </div>

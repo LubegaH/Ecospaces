@@ -88,8 +88,8 @@ const RegisterModel = () => {
   };
 
   const toggle = useCallback(() => {
-    registerModal.onClose();
-    loginModal.onOpen();
+    registerModal.onOpen();
+    loginModal.onClose();
   }, [loginModal, registerModal]);
 
   /**
